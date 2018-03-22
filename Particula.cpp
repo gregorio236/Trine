@@ -7,9 +7,10 @@ Particula::Particula(float x, float y, float tempo)
 	this->x = x;
 	this->y = y;
 	this->tempo = tempo;
+	this->duracao = tempo;
 
 	sprite.setSpriteSheet("particula");
-	sprite.setEscala(tempo, tempo);
+	sprite.setEscala(1.0f, 1.0f);
 	sprite.setVelocidadeAnimacao(10.0f);
 }
 
@@ -42,7 +43,8 @@ void Particula::rodar()
 			p->sprite.avancarAnimacao();
 			p->sprite.desenhar(p->x, p->y);
 			p->tempo -= gTempo.getDeltaTempo();
-			p->sprite.setEscala(p->tempo, p->tempo);
+			float escala = p->tempo / p->duracao;
+			p->sprite.setEscala(escala, escala);
 		}
 	}
 }

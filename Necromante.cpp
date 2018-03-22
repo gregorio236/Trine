@@ -81,7 +81,7 @@ void Necromante::levitar()
 	{
 		caixa->setPosicao(gMouse.x, gMouse.y);
 
-		Particula::cria(3, gMouse.x, gMouse.y, 60.0f, 1.0f);
+		Particula::cria(5, gMouse.x, gMouse.y, 60.0f, uniRandEntre(0.5f, 1.5f));
 
 		if (som.terminouDeTocar())
 			som.tocar();

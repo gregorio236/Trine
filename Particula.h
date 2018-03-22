@@ -22,6 +22,7 @@ private:
 	Sprite sprite;
 	float x, y;
 	float tempo;
+	float duracao;
 
 	static void deletarParticulas();
 };
