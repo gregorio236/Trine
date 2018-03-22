@@ -11,6 +11,11 @@ GerenciadorObjetos::~GerenciadorObjetos()
 {
 }
 
+vector<Caixa*> GerenciadorObjetos::geCaixas()
+{
+	return caixas;
+}
+
 void GerenciadorObjetos::rodar()
 {
 	for (int i = 0; i < tiros.size(); i++)
@@ -49,9 +54,9 @@ void GerenciadorObjetos::deletarTiro(Tiro * tiro)
 	}
 }
 
-void GerenciadorObjetos::criarCaixa(Caixa * caixa)
+void GerenciadorObjetos::criaCaixa(float x, float y)
 {
-	caixas.push_back(caixa);
+	caixas.push_back(new Caixa(x, y));
 }
 
 Caixa * GerenciadorObjetos::pegaCaixa(float x, float y)

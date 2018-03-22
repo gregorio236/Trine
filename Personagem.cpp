@@ -16,6 +16,11 @@ Personagem::~Personagem()
 
 }
 
+Sprite Personagem::getSprite()
+{
+	return sprite;
+}
+
 int Personagem::getX()
 {
 	return x;

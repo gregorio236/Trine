@@ -11,6 +11,7 @@ using namespace std;
 #include "Guerreiro.h"
 #include "Necromante.h"
 #include "GerenciadorObjetos.h"
+#include "GerenciadorColisao.h"
 #include "Particula.h"
 
 class Jogo
@@ -19,13 +20,15 @@ public:
 	Jogo();
 	~Jogo();
 
+	static Personagem* getJogador();
+
 	void inicializar();
 	void finalizar();
 
 	void executar();
 
 private:
-	Personagem * jogador;
+	static Personagem * jogador;
 	Curandeiro* curandeiro;
 	Guerreiro* guerreiro;
 	Necromante* necromante;

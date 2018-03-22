@@ -10,11 +10,13 @@ public:
 	GerenciadorObjetos();
 	~GerenciadorObjetos();
 
+	static vector<Caixa*> geCaixas();
+
 	static void rodar();
 
 	static void criarTiro(float x, float y, Vetor2D direcao);
 
-	static void criarCaixa(Caixa* caixa);
+	static void criaCaixa(float x, float y);
 	static Caixa* pegaCaixa(float x, float y);
 
 private:

@@ -101,6 +101,7 @@
   <ItemGroup>
     <ClCompile Include="Caixa.cpp" />
     <ClCompile Include="Curandeiro.cpp" />
+    <ClCompile Include="GerenciadorColisao.cpp" />
     <ClCompile Include="GerenciadorObjetos.cpp" />
     <ClCompile Include="Guerreiro.cpp" />
     <ClCompile Include="Jogo.cpp" />
@@ -113,6 +114,7 @@
   <ItemGroup>
     <ClInclude Include="Caixa.h" />
     <ClInclude Include="Curandeiro.h" />
+    <ClInclude Include="GerenciadorColisao.h" />
     <ClInclude Include="GerenciadorObjetos.h" />
     <ClInclude Include="Guerreiro.h" />
     <ClInclude Include="Jogo.h" />

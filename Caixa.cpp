@@ -1,5 +1,7 @@
 #include "Caixa.h"
 
+#include "GerenciadorColisao.h"
+
 Caixa::Caixa(float x, float y)
 {
 	this->x = x;
@@ -46,40 +48,46 @@ void Caixa::desenhar()
 
 void Caixa::deslocamentoX(float & x, float vel)
 {
-	x += vel;
-	float tam = sprite.getLarguraOriginal() * 3 / 2;
-	if (vel < 0)
+	if (!(GerenciadorColisao::testarComJogador(this, x + vel, y)))
 	{
-		if (x < tam)
+		x += vel;
+		float tam = sprite.getLarguraOriginal() * 3 / 2;
+		if (vel < 0)
 		{
-			x = tam;
+			if (x < tam)
+			{
+				x = tam;
+			}
 		}
-	}
-	else
-	{
-		if (x > gJanela.getLargura() - tam)
+		else
 		{
-			x = gJanela.getLargura() - tam;
+			if (x > gJanela.getLargura() - tam)
+			{
+				x = gJanela.getLargura() - tam;
+			}
 		}
 	}
 }
 
 void Caixa::deslocamentoY(float & y, float vel)
 {
-	y += vel;
-	float tam = sprite.getAlturaOriginal() * 3 / 2;
-	if (vel < 0)
+	if (!(GerenciadorColisao::testarComJogador(this, x, y + vel)))
 	{
-		if (y < tam)
+		y += vel;
+		float tam = sprite.getAlturaOriginal() * 3 / 2;
+		if (vel < 0)
 		{
-			y = tam;
+			if (y < tam)
+			{
+				y = tam;
+			}
 		}
-	}
-	else
-	{
-		if (y > gJanela.getAltura() - tam)
+		else
 		{
-			y = gJanela.getAltura() - tam;
+			if (y > gJanela.getAltura() - tam)
+			{
+				y = gJanela.getAltura() - tam;
+			}
 		}
 	}
 }

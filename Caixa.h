@@ -3,6 +3,9 @@
 
 #include "libUnicornio.h"
 
+
+//class GerenciadorColisao;
+
 class Caixa
 {
 public:

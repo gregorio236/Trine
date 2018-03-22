@@ -1,11 +1,18 @@
 #include "Jogo.h"
 
+Personagem* Jogo::jogador;
+
 Jogo::Jogo()
 {
 }
 
 Jogo::~Jogo()
 {
+}
+
+Personagem * Jogo::getJogador()
+{
+	return jogador;
 }
 
 void Jogo::inicializar()
@@ -30,8 +37,8 @@ void Jogo::inicializar()
 	jogador = curandeiro;
 	jogador->setPos(gJanela.getLargura() / 2, gJanela.getAltura() / 2);
 
-	GerenciadorObjetos::criarCaixa(new Caixa(100.0f, 100.0f));
-	GerenciadorObjetos::criarCaixa(new Caixa(200.0f, 200.0f));
+	GerenciadorObjetos::criaCaixa(100.0f, 100.0f);
+	GerenciadorObjetos::criaCaixa(200.0f, 200.0f);
 
 	musica.setAudio("fundo");
 	musica.tocar();

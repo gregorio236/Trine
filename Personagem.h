@@ -20,6 +20,7 @@ public:
 	Personagem();
 	~Personagem();
 
+	Sprite getSprite();
 	int getX();
 	int getY();
 
