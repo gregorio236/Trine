@@ -25,7 +25,11 @@ void Jogo::inicializar()
 
 	gJanela.setCorDeFundo(75, 75, 75);
 
+	gRecursos.carregarSpriteSheet("curandeiro", "assets/curandeiroSheet.png", 4, 4);
 	gRecursos.carregarSpriteSheet("tiro", "assets/tiroSheet.png", 1, 32);
+	gRecursos.carregarSpriteSheet("guerreiro", "assets/guerreiroSheet.png", 4, 4);
+	gRecursos.carregarSpriteSheet("bola", "assets/bolaSheet.png", 1, 4);
+	gRecursos.carregarSpriteSheet("necromante", "assets/necromanteSheet.png", 4, 4);
 	gRecursos.carregarSpriteSheet("caixa", "assets/caixaSheet.png", 1, 1);
 	gRecursos.carregarSpriteSheet("particula", "assets/particulaSheet.png", 1, 19);
 
@@ -47,7 +51,7 @@ void Jogo::inicializar()
 	musica.setAudio("fundo");
 	musica.tocar();
 
-	gAudios.setVolumeGlobal(0.0f);
+	gAudios.setVolumeGlobal(30.0f);
 }
 
 void Jogo::finalizar()

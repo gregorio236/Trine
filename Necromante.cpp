@@ -5,8 +5,6 @@
 
 Necromante::Necromante()
 {
-	gRecursos.carregarSpriteSheet("necromante", "assets/necromanteSheet.png", 4, 4);
-
 	sprite.setSpriteSheet("necromante");
 	sprite.setEscala(3.0f, 3.0f);
 

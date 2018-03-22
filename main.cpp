@@ -8,6 +8,4 @@ int main(int argc, char* argv[])
 	jogo.finalizar();
 
 	return 0;
-	//oi greg
-
 }

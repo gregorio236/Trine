@@ -2,12 +2,8 @@
 
 Guerreiro::Guerreiro()
 {
-	gRecursos.carregarSpriteSheet("guerreiro", "assets/guerreiroSheet.png", 4, 4);
-
 	sprite.setSpriteSheet("guerreiro");
 	sprite.setEscala(3.0f, 3.0f);
-
-	gRecursos.carregarSpriteSheet("bola", "assets/bolaSheet.png", 1, 4);
 
 	bola.setSpriteSheet("bola");
 	bola.setEscala(3.0f, 3.0f);

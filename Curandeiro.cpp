@@ -4,8 +4,6 @@
 
 Curandeiro::Curandeiro()
 {
-	gRecursos.carregarSpriteSheet("curandeiro", "assets/curandeiroSheet.png", 4, 4);
-
 	sprite.setSpriteSheet("curandeiro");
 	sprite.setEscala(3.0f, 3.0f);
 
