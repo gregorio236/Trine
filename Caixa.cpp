@@ -68,6 +68,22 @@ void Caixa::deslocamentoX(float & x, float vel)
 			}
 		}
 	}
+	else
+	{
+		vel /= 100;
+		for (int i = 0; i < 100; i++)
+		{
+			if (!(GerenciadorColisao::testarCComJ(this, x + vel, y)) &&
+				!(GerenciadorColisao::testarCComC(this, x + vel, y)))
+			{
+				x += vel;
+			}
+			else
+			{
+				break;
+			}
+		}
+	}
 }
 
 void Caixa::deslocamentoY(float & y, float vel)
@@ -89,6 +105,22 @@ void Caixa::deslocamentoY(float & y, float vel)
 			if (y > gJanela.getAltura() - tam)
 			{
 				y = gJanela.getAltura() - tam;
+			}
+		}
+	}
+	else
+	{
+		vel /= 100;
+		for (int i = 0; i < 100; i++)
+		{
+			if (!(GerenciadorColisao::testarCComJ(this, x, y + vel)) &&
+				!(GerenciadorColisao::testarCComC(this, x, y + vel)))
+			{
+				y += vel;
+			}
+			else
+			{
+				break;
 			}
 		}
 	}
