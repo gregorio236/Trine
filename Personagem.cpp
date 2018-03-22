@@ -135,6 +135,21 @@ void Personagem::deslocamentoX(float vel)
 			}
 		}
 	}
+	else
+	{
+		vel /= 100;
+		for (int i = 0; i < 100; i++)
+		{
+			if (!(GerenciadorColisao::testarJComC(x + vel, y)))
+			{
+				x += vel;
+			}
+			else
+			{
+				break;
+			}
+		}
+	}
 }
 
 void Personagem::deslocamentoY(float vel)
@@ -155,6 +170,21 @@ void Personagem::deslocamentoY(float vel)
 			if (y > gJanela.getAltura() - tam)
 			{
 				y = gJanela.getAltura() - tam;
+			}
+		}
+	}
+	else
+	{
+		vel /= 100;
+		for (int i = 0; i < 100; i++)
+		{
+			if (!(GerenciadorColisao::testarJComC(x, y + vel)))
+			{
+				y += vel;
+			}
+			else
+			{
+				break;
 			}
 		}
 	}
