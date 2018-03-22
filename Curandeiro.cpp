@@ -8,6 +8,7 @@ Curandeiro::Curandeiro()
 	sprite.setEscala(3.0f, 3.0f);
 
 	som.setAudio("tiro");
+	som.setVolume(45.0f);
 }
 
 Curandeiro::~Curandeiro()
