@@ -11,7 +11,7 @@ GerenciadorObjetos::~GerenciadorObjetos()
 {
 }
 
-vector<Caixa*> GerenciadorObjetos::geCaixas()
+vector<Caixa*> GerenciadorObjetos::getCaixas()
 {
 	return caixas;
 }

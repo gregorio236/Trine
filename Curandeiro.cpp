@@ -1,5 +1,7 @@
 #include "Curandeiro.h"
 
+#include "GerenciadorObjetos.h"
+
 Curandeiro::Curandeiro()
 {
 	gRecursos.carregarSpriteSheet("curandeiro", "assets/curandeiroSheet.png", 4, 4);

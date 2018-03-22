@@ -10,9 +10,6 @@ using namespace std;
 #include "Curandeiro.h"
 #include "Guerreiro.h"
 #include "Necromante.h"
-#include "GerenciadorObjetos.h"
-#include "GerenciadorColisao.h"
-#include "Particula.h"
 
 class Jogo
 {

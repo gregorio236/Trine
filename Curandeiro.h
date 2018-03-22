@@ -2,7 +2,6 @@
 #define CURANDEIRO_H
 
 #include "Personagem.h"
-#include "GerenciadorObjetos.h"
 
 class Curandeiro : public Personagem
 {

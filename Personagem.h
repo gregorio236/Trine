@@ -1,9 +1,6 @@
 #ifndef PERSONAGEM_H
 #define PERSONAGEM_H
 
-#include <vector>
-using namespace std;
-
 #include "libUnicornio.h"
 
 enum animacao
@@ -46,8 +43,8 @@ protected:
 	virtual void animar();
 	virtual void desenhar();
 
-	void deslocamentoX(float &x, float vel);
-	void deslocamentoY(float &y, float vel);
+	void deslocamentoX(float vel);
+	void deslocamentoY(float vel);
 };
 
 #endif

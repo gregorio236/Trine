@@ -1,5 +1,8 @@
 #include "Necromante.h"
 
+#include "GerenciadorObjetos.h"
+#include "Particula.h"
+
 Necromante::Necromante()
 {
 	gRecursos.carregarSpriteSheet("necromante", "assets/necromanteSheet.png", 4, 4);
@@ -37,22 +40,22 @@ void Necromante::inputs()
 
 	if (gTeclado.segurando[TECLA_D])
 	{
-		deslocamentoX(x, vel);
+		deslocamentoX(vel);
 		sprite.setAnimacao(DIREITA);
 	}
 	else if (gTeclado.segurando[TECLA_A])
 	{
-		deslocamentoX(x, -vel);
+		deslocamentoX(-vel);
 		sprite.setAnimacao(ESQUERDA);
 	}
 	else if (gTeclado.segurando[TECLA_W])
 	{
-		deslocamentoY(y, -vel);
+		deslocamentoY(-vel);
 		sprite.setAnimacao(CIMA);
 	}
 	else if (gTeclado.segurando[TECLA_S])
 	{
-		deslocamentoY(y, vel);
+		deslocamentoY(vel);
 		sprite.setAnimacao(BAIXO);
 	}
 	else

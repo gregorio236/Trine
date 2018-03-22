@@ -48,7 +48,8 @@ void Caixa::desenhar()
 
 void Caixa::deslocamentoX(float & x, float vel)
 {
-	if (!(GerenciadorColisao::testarComJogador(this, x + vel, y)))
+	if (!(GerenciadorColisao::testarCComJ(this, x + vel, y)) &&
+		!(GerenciadorColisao::testarCComC(this, x + vel, y)))
 	{
 		x += vel;
 		float tam = sprite.getLarguraOriginal() * 3 / 2;
@@ -71,7 +72,8 @@ void Caixa::deslocamentoX(float & x, float vel)
 
 void Caixa::deslocamentoY(float & y, float vel)
 {
-	if (!(GerenciadorColisao::testarComJogador(this, x, y + vel)))
+	if (!(GerenciadorColisao::testarCComJ(this, x, y + vel)) &&
+		!(GerenciadorColisao::testarCComC(this, x, y + vel)))
 	{
 		y += vel;
 		float tam = sprite.getAlturaOriginal() * 3 / 2;

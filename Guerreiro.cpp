@@ -73,22 +73,22 @@ void Guerreiro::inputs()
 
 		if (gTeclado.segurando[TECLA_D])
 		{
-			deslocamentoX(x, vel);
+			deslocamentoX(vel);
 			sprite.setAnimacao(DIREITA);
 		}
 		else if (gTeclado.segurando[TECLA_A])
 		{
-			deslocamentoX(x, -vel);
+			deslocamentoX(-vel);
 			sprite.setAnimacao(ESQUERDA);
 		}
 		else if (gTeclado.segurando[TECLA_W])
 		{
-			deslocamentoY(y, -vel);
+			deslocamentoY(-vel);
 			sprite.setAnimacao(CIMA);
 		}
 		else if (gTeclado.segurando[TECLA_S])
 		{
-			deslocamentoY(y, vel);
+			deslocamentoY(vel);
 			sprite.setAnimacao(BAIXO);
 		}
 		else
@@ -128,6 +128,6 @@ void Guerreiro::desenhar()
 
 void Guerreiro::rolar()
 {
-	deslocamentoX(x, 2.5 * vel*direcao.x);
-	deslocamentoY(y, 2.5 * vel*direcao.y);
+	deslocamentoX(2.5 * vel*direcao.x);
+	deslocamentoY(2.5 * vel*direcao.y);
 }

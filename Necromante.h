@@ -2,8 +2,7 @@
 #define NECROMANTE_H
 
 #include "Personagem.h"
-#include "GerenciadorObjetos.h"
-#include "Particula.h"
+#include "Caixa.h"
 
 class Necromante : public Personagem
 {

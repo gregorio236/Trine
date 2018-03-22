@@ -1,5 +1,9 @@
 #include "Jogo.h"
 
+#include "GerenciadorObjetos.h"
+#include "GerenciadorColisao.h"
+#include "Particula.h"
+
 Personagem* Jogo::jogador;
 
 Jogo::Jogo()

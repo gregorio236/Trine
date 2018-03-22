@@ -1,5 +1,7 @@
 #include "Personagem.h"
 
+#include "GerenciadorColisao.h"
+
 float Personagem::x = 0.0f;
 float Personagem::y = 0.0f;
 float Personagem::vel = 2.0f;
@@ -74,22 +76,22 @@ void Personagem::inputs()
 
 	if (gTeclado.segurando[TECLA_D])
 	{
-		deslocamentoX(x, vel);
+		deslocamentoX(vel);
 		sprite.setAnimacao(DIREITA);
 	}
 	else if (gTeclado.segurando[TECLA_A])
 	{
-		deslocamentoX(x, -vel);
+		deslocamentoX(-vel);
 		sprite.setAnimacao(ESQUERDA);
 	}
 	else if (gTeclado.segurando[TECLA_W])
 	{
-		deslocamentoY(y, -vel);
+		deslocamentoY(-vel);
 		sprite.setAnimacao(CIMA);
 	}
 	else if (gTeclado.segurando[TECLA_S])
 	{
-		deslocamentoY(y, vel);
+		deslocamentoY(vel);
 		sprite.setAnimacao(BAIXO);
 	}
 	else
@@ -112,42 +114,48 @@ void Personagem::desenhar()
 	sprite.desenhar(x, y);
 }
 
-void Personagem::deslocamentoX(float & x, float vel)
+void Personagem::deslocamentoX(float vel)
 {
-	x += vel;
-	float tam = sprite.getLargura() / 2;
-	if (vel < 0)
+	if (!(GerenciadorColisao::testarJComC(x + vel, y)))
 	{
-		if (x < tam)
+		x += vel;
+		float tam = sprite.getLargura() / 2;
+		if (vel < 0)
 		{
-			x = tam;
+			if (x < tam)
+			{
+				x = tam;
+			}
 		}
-	}
-	else
-	{
-		if (x > gJanela.getLargura() - tam)
+		else
 		{
-			x = gJanela.getLargura() - tam;
+			if (x > gJanela.getLargura() - tam)
+			{
+				x = gJanela.getLargura() - tam;
+			}
 		}
 	}
 }
 
-void Personagem::deslocamentoY(float & y, float vel)
+void Personagem::deslocamentoY(float vel)
 {
-	y += vel;
-	float tam = sprite.getAltura() / 2;
-	if (vel < 0)
+	if (!(GerenciadorColisao::testarJComC(x, y + vel)))
 	{
-		if (y < tam)
+		y += vel;
+		float tam = sprite.getAltura() / 2;
+		if (vel < 0)
 		{
-			y = tam;
+			if (y < tam)
+			{
+				y = tam;
+			}
 		}
-	}
-	else
-	{
-		if (y > gJanela.getAltura() - tam)
+		else
 		{
-			y = gJanela.getAltura() - tam;
+			if (y > gJanela.getAltura() - tam)
+			{
+				y = gJanela.getAltura() - tam;
+			}
 		}
 	}
 }

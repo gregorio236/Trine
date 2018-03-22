@@ -10,7 +10,7 @@ public:
 	GerenciadorObjetos();
 	~GerenciadorObjetos();
 
-	static vector<Caixa*> geCaixas();
+	static vector<Caixa*> getCaixas();
 
 	static void rodar();
 
