@@ -106,6 +106,7 @@
     <ClCompile Include="Jogo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Necromante.cpp" />
+    <ClCompile Include="Particula.cpp" />
     <ClCompile Include="Personagem.cpp" />
     <ClCompile Include="Tiro.cpp" />
   </ItemGroup>
@@ -116,6 +117,7 @@
     <ClInclude Include="Guerreiro.h" />
     <ClInclude Include="Jogo.h" />
     <ClInclude Include="Necromante.h" />
+    <ClInclude Include="Particula.h" />
     <ClInclude Include="Personagem.h" />
     <ClInclude Include="Tiro.h" />
   </ItemGroup>

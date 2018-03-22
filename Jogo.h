@@ -11,6 +11,7 @@ using namespace std;
 #include "Guerreiro.h"
 #include "Necromante.h"
 #include "GerenciadorObjetos.h"
+#include "Particula.h"
 
 class Jogo
 {

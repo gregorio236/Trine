@@ -3,6 +3,7 @@
 
 #include "Personagem.h"
 #include "GerenciadorObjetos.h"
+#include "Particula.h"
 
 class Necromante : public Personagem
 {

@@ -70,7 +70,6 @@ void Necromante::pegar()
 	caixa = GerenciadorObjetos::pegaCaixa(gMouse.x, gMouse.y);
 	if (caixa != nullptr)
 	{
-		caixa->setEscala(1.5f);
 		trocar = false;
 		som.tocar();
 	}
@@ -82,6 +81,8 @@ void Necromante::levitar()
 	{
 		caixa->setPosicao(gMouse.x, gMouse.y);
 
+		Particula::cria(3, gMouse.x, gMouse.y, 60.0f, 1.0f);
+
 		if (som.terminouDeTocar())
 			som.tocar();
 	}
@@ -91,7 +92,6 @@ void Necromante::soltar()
 {
 	if (caixa != nullptr)
 	{
-		caixa->setEscala(3.0f);
 		caixa = nullptr;
 		trocar = true;
 		som.parar();

@@ -34,11 +34,6 @@ void Caixa::setPosicao(float x, float y)
 	deslocamentoY(this->y, y - this->y);
 }
 
-void Caixa::setEscala(float escala)
-{
-	sprite.setEscala(escala, escala);
-}
-
 void Caixa::animar()
 {
 	sprite.avancarAnimacao();

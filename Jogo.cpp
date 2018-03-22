@@ -16,6 +16,7 @@ void Jogo::inicializar()
 
 	gRecursos.carregarSpriteSheet("tiro", "assets/tiroSheet.png", 1, 32);
 	gRecursos.carregarSpriteSheet("caixa", "assets/caixaSheet.png", 1, 1);
+	gRecursos.carregarSpriteSheet("particula", "assets/particulaSheet.png", 1, 19);
 
 	gRecursos.carregarAudio("tiro", "assets/tiro.wav");
 	gRecursos.carregarAudio("bola", "assets/bola.wav");
@@ -34,6 +35,8 @@ void Jogo::inicializar()
 
 	musica.setAudio("fundo");
 	musica.tocar();
+
+	gAudios.setVolumeGlobal(0.0f);
 }
 
 void Jogo::finalizar()
@@ -66,6 +69,8 @@ void Jogo::executar()
 				jogador = necromante;
 			}
 		}
+
+		Particula::rodar();
 
 		GerenciadorObjetos::rodar();
 

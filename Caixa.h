@@ -14,7 +14,6 @@ public:
 	float getY();
 
 	void setPosicao(float x, float y);
-	void setEscala(float escala);
 
 	void animar();
 	void desenhar();
