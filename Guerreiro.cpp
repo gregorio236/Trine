@@ -38,7 +38,7 @@ void Guerreiro::rodar()
 	if (rolando)
 	{
 		rolar();
-		if (tempo < 1.0f)
+		if (tempo < 2.0f)
 		{
 			tempo += gTempo.getDeltaTempo();
 
@@ -124,6 +124,6 @@ void Guerreiro::desenhar()
 
 void Guerreiro::rolar()
 {
-	deslocamentoX(2.5 * vel*direcao.x);
-	deslocamentoY(2.5 * vel*direcao.y);
+	deslocamentoX(1.7 * vel*direcao.x);
+	deslocamentoY(1.7 * vel*direcao.y);
 }
