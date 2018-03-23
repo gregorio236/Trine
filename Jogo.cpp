@@ -47,16 +47,13 @@ void Jogo::inicializar()
 
 	GerenciadorObjetos::criaCaixa(100.0f, 100.0f);
 	GerenciadorObjetos::criaCaixa(200.0f, 200.0f);
-	GerenciadorObjetos::criaCaixa(250.0f, 200.0f);
-	GerenciadorObjetos::criaCaixa(300.0f, 200.0f);
-	GerenciadorObjetos::criaCaixa(400.0f, 200.0f);
-	GerenciadorObjetos::criaCaixa(500.0f, 200.0f);
+	GerenciadorObjetos::criaCaixa(300.0f, 300.0f);
 
 	musica.setAudio("fundo");
-	musica.setVolume(50.0f);
+	musica.setVolume(45.0f);
 	musica.tocar();
 
-	gAudios.setVolumeGlobal(17.0f);
+	gAudios.setVolumeGlobal(30.0f);
 }
 
 void Jogo::finalizar()

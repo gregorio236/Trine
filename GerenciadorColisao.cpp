@@ -70,3 +70,20 @@ bool GerenciadorColisao::testarCComC(Caixa * caixa, float dx, float dy)
 
 	return false;
 }
+
+bool GerenciadorColisao::testarTComC(Tiro * tiro)
+{
+	vector<Caixa*> caixas = GerenciadorObjetos::getCaixas();
+
+	for (int i = 0; i < caixas.size(); i++)
+	{
+		Caixa* c = caixas[i];
+		if (uniTestarColisaoSpriteComSprite(tiro->getSprite(), tiro->getX(), tiro->getY(), 0.0f,
+			c->getSprite(), c->getX(), c->getY(), 0.0f))
+		{
+			return true;
+		}
+	}
+
+	return false;
+}

@@ -9,3 +9,10 @@ int main(int argc, char* argv[])
 
 	return 0;
 }
+
+/*
+Lead Programmer - Gregorio Ramos
+Sound Designer - Luiza Vargas
+Game Designer - Luiza Vargas
+Art Director - Luiza Vargas
+*/

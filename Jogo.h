@@ -21,7 +21,6 @@ public:
 
 	void inicializar();
 	void finalizar();
-
 	void executar();
 
 private:

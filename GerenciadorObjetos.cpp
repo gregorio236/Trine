@@ -1,5 +1,7 @@
 #include "GerenciadorObjetos.h"
 
+#include "GerenciadorColisao.h"
+
 vector<Tiro*> GerenciadorObjetos::tiros;
 vector<Caixa*> GerenciadorObjetos::caixas;
 
@@ -82,6 +84,10 @@ void GerenciadorObjetos::testarTiro(Tiro * tiro)
 	float tamY = tiro->getSprite().getAltura() / 2;
 	if ((tiro->getX() < tamX || tiro->getX() > (gJanela.getLargura() - tamX)) ||
 		(tiro->getY() < tamY || tiro->getY() > (gJanela.getAltura() - tamY)))
+	{
+		deletarTiro(tiro);
+	}
+	else if (GerenciadorColisao::testarTComC(tiro))
 	{
 		deletarTiro(tiro);
 	}
